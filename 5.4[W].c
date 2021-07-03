@@ -1,4 +1,4 @@
-/* ±àĞ´Ò»¸ö³ÌĞò£¬ÓÃ»§ÊäÈëÉí¸ßÀåÃ×£¬²¢·Ö±ğÓÃÀåÃ×ºÍÓ¢´çÎ»µ¥Î»ÏÔÊ¾¸ÃÖµ£¬ÔÊĞíÓĞĞ¡Êı²¿·Ö */
+/* ç¼–å†™ä¸€ä¸ªç¨‹åºï¼Œç”¨æˆ·è¾“å…¥èº«é«˜å˜ç±³ï¼Œå¹¶åˆ†åˆ«ç”¨å˜ç±³å’Œè‹±å¯¸ä½å•ä½æ˜¾ç¤ºè¯¥å€¼ï¼Œå…è®¸æœ‰å°æ•°éƒ¨åˆ† */
 #include <stdio.h>
 int main (void)
 {
@@ -9,7 +9,7 @@ int main (void)
     while(cm>0)
     {
         he=inch/12;
-        in=inch-he;
+        in=inch%he;
         printf("%.1f cm=%d feet,%.1f inches.\n",cm,he,in);
         printf("enter a height in centimeters(<=0 to quit):");
         scanf("%f",&cm);
