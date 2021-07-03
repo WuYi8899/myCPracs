@@ -1,26 +1,36 @@
-/*±àĞ´Ò»¸ö³ÌĞò£¬ÒªÇóÓÃ»§ÊäÈëÏÂÏŞÕûÊıºÍÒ»¸öÉÏÏŞÕûÊı£¬È»ºó£¬ÒÀ´Î¼ÆËã´ÓÏÂÏŞµ½ÉÏÏŞµÄÃ¿Ò»¸öÕûÊıµÄÆ½·½µÄ¼ÓºÍ
-×îºóÏÔÊ¾½á¹û¡£³ÌĞò½«²»¶ÏÌáÊ¾ÓÃ»§ÊäÈëÏÂÏŞÕûÊıºÍÉÏÏŞÕûÊı²¢ÏÔÊ¾³ö´ğ°¸£¬Ö±µ½ÓÃ»§ÊäÈëµÄÉÏÏŞÕûÊıµÈÓÚ»òĞ¡ÓÚÏÂÏŞÕûÊıÎªÖ¹¡£
-³ÌĞòÔËĞĞµÄ½á¹ûÊ¾ÀıÓ¦¸ÃÈçÏÂËùÊ¾£º
+/*ç¼–å†™ä¸€ä¸ªç¨‹åºï¼Œè¦æ±‚ç”¨æˆ·è¾“å…¥ä¸‹é™æ•´æ•°å’Œä¸€ä¸ªä¸Šé™æ•´æ•°ï¼Œç„¶åï¼Œä¾æ¬¡è®¡ç®—ä»ä¸‹é™åˆ°ä¸Šé™çš„æ¯ä¸€ä¸ªæ•´æ•°çš„å¹³æ–¹çš„åŠ å’Œ
+æœ€åæ˜¾ç¤ºç»“æœã€‚ç¨‹åºå°†ä¸æ–­æç¤ºç”¨æˆ·è¾“å…¥ä¸‹é™æ•´æ•°å’Œä¸Šé™æ•´æ•°å¹¶æ˜¾ç¤ºå‡ºç­”æ¡ˆï¼Œç›´åˆ°ç”¨æˆ·è¾“å…¥çš„ä¸Šé™æ•´æ•°ç­‰äºæˆ–å°äºä¸‹é™æ•´æ•°ä¸ºæ­¢ã€‚
+ç¨‹åºè¿è¡Œçš„ç»“æœç¤ºä¾‹åº”è¯¥å¦‚ä¸‹æ‰€ç¤ºï¼š
 Enter lower and upper integer limits: 5 9
 Enter next set of limits:3 25
 The sums of the squares from 9 t0 625 iS 5520
 Done    */
 
 #include <stdio.h>
-int main (void)
+
+int main()
 {
-    int lower,upper,a;
+    
+    int lower,upper;
     printf("Enter lower and upper integer limits: ");
     scanf("%d %d", &lower, &upper);
-    while(lower < upper)
-    {
-        int b;
+    if(lower > upper){
+        int tmp = lower;
+        lower = upper;
+        upper = tmp;
+    }
 
-        for(a=lower;a<=upper;a++)
-        printf("The sums of the squares from %d to %d is %d \n", lower*lower, upper*upper,b);
+while(1){
+        int a = lower, sum  = 0;
+while(a <= upper)
+        {
+            sum += a * a;
+            ++a;
+        }
+        printf("The sums of the squares from %d to %d is %d \n", lower, upper,sum);
         printf("Enter next set of limits: ");
         scanf("%d %d", &lower, &upper);
-    }
+}
     printf("Done\n");
     return 0;
 }
