@@ -1,38 +1,35 @@
-//±àÐ´Ò»¸ö³ÌÐò£¬¶ÁÈ¡ÕûÊý£¬Ö±µ½ÓÃ»§ÊäÈë0¡£ÊäÈë½áÊøºó£¬³ÌÐòÓ¦¸Ã±¨¸æÊäÈëµÄÅ¼Êý£¨²»°üÀ¨0£©¸öÊý¡¢
-//ÕâÐ©Å¼ÊýµÄÆ½¾ùÖµ£¬ÊäÈëµÄÆæÊý¸öÊýÒÔ¼°ÆæÊýµÄÆ½¾ùÖµ¡£
+//ç¼–å†™ä¸€ä¸ªç¨‹åºï¼Œè¯»å–æ•´æ•°ï¼Œç›´åˆ°ç”¨æˆ·è¾“å…¥0ã€‚è¾“å…¥ç»“æŸåŽï¼Œç¨‹åºåº”è¯¥æŠ¥å‘Šè¾“å…¥çš„å¶æ•°ï¼ˆä¸åŒ…æ‹¬0ï¼‰ä¸ªæ•°ã€
+//è¿™äº›å¶æ•°çš„å¹³å‡å€¼ï¼Œè¾“å…¥çš„å¥‡æ•°ä¸ªæ•°ä»¥åŠå¥‡æ•°çš„å¹³å‡å€¼ã€‚
 
 #include <stdio.h>
 int main (void)
 {
 
-    int a,b,c;               //bÅ¼Êý¸öÊý cÆæÊý¸öÊý
-    double d,e;              //Æ½¾ùÊý
-    int amax,amix;           //Ïà¼Ó
-    printf("ÇëÊäÈëÕûÊý,");
-    printf("ÊäÈë0ÍË³ö:");
+    int a,b = 0 ,c = 0;               //bå¶æ•°ä¸ªæ•° cå¥‡æ•°ä¸ªæ•°
+    int amax,amix;           //ç›¸åŠ 
+    printf("è¯·è¾“å…¥æ•´æ•°,");
+    printf("è¾“å…¥0é€€å‡º:");
     while(scanf("%d",&a)==1 && a!=0)
     {
-        if (a%2==0)     //Å¼Êý
+        if (a%2==0)     //å¶æ•°
          {
             b++;
             amax+=a;
          }
-        else            //ÆæÊý
+        else            //å¥‡æ•°
         {
             c++;
             amix+=a;
         }
-        printf("Å¼ÊýµÄ¸öÊýÎª:%d   ÆæÊýµÄ¸öÊýÎª:%d\n",b,c);
+        printf("å¶æ•°çš„ä¸ªæ•°ä¸º:%d   å¥‡æ•°çš„ä¸ªæ•°ä¸º:%d\n",b,c);
     }
     if (b>0)
     {
-        d=amax/b;
-        printf("Å¼ÊýÆ½¾ùÊýÖµÎª:%.2f\n",d);
+        printf("å¶æ•°å¹³å‡æ•°å€¼ä¸º:%.2f\n",(double)amax/b);
     }
     if (c>0)
     {
-        e=amix/c;
-        printf("ÆæÊýÆ½¾ùÊýÖµÎª:%.2f\n",e);
+        printf("å¥‡æ•°å¹³å‡æ•°å€¼ä¸º:%.2f\n",(double)amix/c);
     }
 
 
